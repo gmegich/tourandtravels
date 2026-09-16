@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 
 $page_title = 'FAQ — ' . SITE_NAME;
-$page_description = 'Frequently asked questions about Kenya safaris, park fees, vehicles, migration timing, and booking with Nyika Safaris.';
+$page_description = 'Frequently asked questions about Kenya safari packages, park fees, migration timing, and booking with Nyika Safaris.';
 $faqs = site_faqs();
 
 require __DIR__ . '/includes/header.php';
@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
   </div>
   <div class="page-hero-content">
     <h1>Frequently asked questions</h1>
-    <p>Straight answers on planning, payments, vehicles, and the best time to visit.</p>
+    <p>Straight answers on planning, payments, safari timing, and what your trip includes.</p>
   </div>
 </section>
 

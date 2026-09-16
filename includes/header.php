@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/functions.php';
 
 $page_title = $page_title ?? SITE_NAME;
-$page_description = $page_description ?? 'Premium Kenya safari, beach, and private tour experiences with Nyika Safaris.';
+$page_description = $page_description ?? 'Kenya safari packages, beach holidays, and East African trip planning with Nyika Safaris.';
 $body_class = $body_class ?? '';
 $preload_image = $preload_image ?? '';
 ?>
@@ -44,8 +44,8 @@ $preload_image = $preload_image ?? '';
         <a class="nav-link<?= nav_active('index.php') ?>" href="index.php">Home</a>
         <a class="nav-link<?= (current_page() === 'tours.php' || current_page() === 'tour.php') ? ' is-active' : '' ?>" href="tours.php">Tours</a>
         <a class="nav-link<?= nav_active('destinations.php') ?>" href="destinations.php">Destinations</a>
-        <a class="nav-link<?= nav_active('vehicles.php') ?>" href="vehicles.php">Transport</a>
         <a class="nav-link<?= nav_active('plan.php') ?>" href="plan.php">Plan</a>
+        <a class="nav-link<?= nav_active('faq.php') ?>" href="faq.php">FAQ</a>
         <a class="nav-link<?= nav_active('about.php') ?>" href="about.php">About</a>
         <a class="nav-link nav-cta<?= nav_active('contact.php') ?>" href="contact.php">Book Now</a>
       </nav>

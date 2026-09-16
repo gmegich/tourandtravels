@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 
 $page_title = SITE_NAME . ' — ' . SITE_TAGLINE;
-$page_description = 'Book Kenya safaris, beach holidays, and private tours with Nyika Safaris.';
+$page_description = 'East African safari packages, beach extensions, and trip planning for Kenya and beyond — Nyika Safaris.';
 $body_class = 'page-home';
 
 $featured = array_slice(get_destinations(true), 0, 6);
@@ -35,10 +35,10 @@ require __DIR__ . '/includes/header.php';
   <div class="hero-content">
     <p class="hero-brand"><?= e(SITE_NAME) ?></p>
     <h1 class="hero-title"><?= e(SITE_TAGLINE) ?></h1>
-    <p class="hero-lead">Safaris, coast escapes, and private journeys crafted for travelers who want Kenya done properly.</p>
+    <p class="hero-lead">Safari packages, beach extensions, and private itineraries planned for visitors who want East Africa done properly.</p>
     <div class="btn-group">
-      <a class="btn btn-primary" href="contact.php">Book a trip</a>
-      <a class="btn btn-ghost" href="tours.php">View packages</a>
+      <a class="btn btn-primary" href="contact.php">Plan your trip</a>
+      <a class="btn btn-ghost" href="tours.php">View safari packages</a>
     </div>
   </div>
 </section>
@@ -178,23 +178,23 @@ require __DIR__ . '/includes/header.php';
   <div class="shell">
     <div class="section-head reveal">
       <h2>Why choose us</h2>
-      <p>Local planning, careful pacing, and vehicles that match the journey.</p>
+      <p>Local specialists, clear itineraries, and trip support from first message to departure.</p>
     </div>
     <div class="why-grid">
       <article class="why-item reveal">
         <span class="why-num">01</span>
-        <h3>Kenya specialists</h3>
-        <p>We live the routes we recommend — Mara tracks, coast transfers, and cross-border logistics included.</p>
+        <h3>East Africa specialists</h3>
+        <p>We plan the routes we recommend — Maasai Mara, Amboseli, the coast, and seamless Tanzania or Uganda extensions.</p>
       </article>
       <article class="why-item reveal">
         <span class="why-num">02</span>
-        <h3>Booking-first service</h3>
-        <p>Clear quotes, WhatsApp updates, and a single planner from first inquiry to return airport drop.</p>
+        <h3>Clear trip booking</h3>
+        <p>Written day-by-day plans, lodge options in your budget, and WhatsApp updates from one dedicated planner.</p>
       </article>
       <article class="why-item reveal">
         <span class="why-num">03</span>
-        <h3>Fleet you can trust</h3>
-        <p>Safari vans, Land Cruisers, and VIP Vellfire transfers maintained for comfort and safety.</p>
+        <h3>Travelers first</h3>
+        <p>Pacing for families, honeymooners, and first-time safari guests — with inclusions listed so nothing feels vague.</p>
       </article>
     </div>
   </div>
@@ -212,7 +212,7 @@ require __DIR__ . '/includes/header.php';
         <cite>Amelia &amp; Tom · United Kingdom</cite>
       </figure>
       <figure class="review reveal">
-        <blockquote>“Airport pickup in the Vellfire set the tone — then Diani was effortless. Communication on WhatsApp was excellent.”</blockquote>
+        <blockquote>“They shaped a Mara–Diani combination that felt effortless. Communication on WhatsApp was excellent the whole way.”</blockquote>
         <cite>Priya N. · Nairobi</cite>
       </figure>
       <figure class="review reveal">
@@ -227,7 +227,7 @@ require __DIR__ . '/includes/header.php';
   <div class="shell">
     <div class="section-head reveal">
       <h2>Common questions</h2>
-      <p>Park fees, vehicles, migration timing, and how booking works.</p>
+      <p>Park fees, migration timing, custom trips, and how booking works.</p>
     </div>
     <div class="faq-list" style="max-width:48rem">
       <?php foreach ($faqs as $i => $faq): ?>

@@ -73,7 +73,7 @@ INSERT INTO packages (title, slug, category, destination_id, duration_days, pric
 SELECT 'Classic Maasai Mara Safari', 'classic-maasai-mara-safari', 'safari', d.id, 3, 45000,
   'Three days of game drives in Kenya''s premier reserve.',
   'Dawn and afternoon drives, park fees guidance, and comfortable lodge or camp stays.',
-  'Transport|Park fees guidance|Driver-guide|Bottled water',
+  'Guided game drives|Park fees guidance|Safari guide|Bottled water',
   'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80', 1, 1
 FROM destinations d WHERE d.slug = 'maasai-mara'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
@@ -82,7 +82,7 @@ INSERT INTO packages (title, slug, category, destination_id, duration_days, pric
 SELECT 'Amboseli Elephant Escape', 'amboseli-elephant-escape', 'safari', d.id, 2, 32000,
   'Kilimanjaro backdrop and legendary elephant herds.',
   'Ideal short safari from Nairobi with superb photography light.',
-  'Transport|Park entry support|Guide|Water',
+  'Guided game drives|Park entry support|Guide|Water',
   'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80', 1, 2
 FROM destinations d WHERE d.slug = 'amboseli'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
@@ -90,8 +90,8 @@ ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 INSERT INTO packages (title, slug, category, destination_id, duration_days, price_from, short_description, description, inclusions, image_url, is_popular, sort_order)
 SELECT 'Diani Beach Break', 'diani-beach-break', 'beach', d.id, 4, 38000,
   'Sun, sand, and coastal cuisine on Kenya''s south coast.',
-  'Transfers, beach hotel recommendations, and optional water sports.',
-  'Airport/road transfer options|Local concierge tips',
+  'Hotel recommendations, beach time, and optional water sports.',
+  'Flight or road link coordination|Local concierge tips',
   'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80', 1, 3
 FROM destinations d WHERE d.slug = 'diani'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
@@ -99,8 +99,8 @@ ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 INSERT INTO packages (title, slug, category, destination_id, duration_days, price_from, short_description, description, inclusions, image_url, is_popular, sort_order)
 SELECT 'Nairobi City Highlights', 'nairobi-city-highlights', 'city', d.id, 1, 12000,
   'National park, giraffe centre, and Karen heritage in one day.',
-  'Perfect arrival or departure day with private vehicle and guide.',
-  'Private vehicle|Guide|Entrance fee support',
+  'Perfect arrival or departure day with a private city guide.',
+  'Private city guide|Entrance fee support',
   'assets/images/destinations/nairobi.jpg', 0, 4
 FROM destinations d WHERE d.slug = 'nairobi'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
@@ -116,17 +116,17 @@ ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 INSERT INTO packages (title, slug, category, destination_id, duration_days, price_from, short_description, description, inclusions, image_url, is_popular, sort_order)
 SELECT 'Family Mara Adventure', 'family-mara-adventure', 'family', d.id, 4, 78000,
   'Family-paced game drives and kid-friendly lodges.',
-  'Softer itineraries, flexible meal stops, and safe vehicles.',
-  'Family vehicle|Guide|Flexible pacing',
+  'Softer itineraries, flexible meal stops, and family-friendly pacing.',
+  'Family-paced game drives|Guide|Flexible pacing',
   'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80', 1, 6
 FROM destinations d WHERE d.slug = 'maasai-mara'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 
 INSERT INTO packages (title, slug, category, destination_id, duration_days, price_from, short_description, description, inclusions, image_url, is_popular, sort_order)
 SELECT 'Coast Honeymoon Escape', 'coast-honeymoon-escape', 'honeymoon', d.id, 5, 95000,
-  'Private transfers, beach villa tips, and romantic extras.',
+  'Seamless arrivals, beach villa tips, and romantic extras.',
   'Diani or Watamu with optional sunset dhow cruise.',
-  'Private transfers|Concierge|Celebration touches',
+  'Arrival support|Concierge|Celebration touches',
   'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80', 1, 7
 FROM destinations d WHERE d.slug = 'diani'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
@@ -135,39 +135,9 @@ INSERT INTO packages (title, slug, category, destination_id, duration_days, pric
 VALUES ('Custom Private Tour', 'custom-private-tour', 'custom', NULL, 7, 0,
   'Built around your dates, pace, and interests.',
   'Tell us your dream itinerary — safari, coast, mountain, or multi-country — and we craft it privately.',
-  'Dedicated planner|Private vehicle options|Flexible routing',
+  'Dedicated planner|Lodge & activity coordination|Flexible routing',
   'assets/images/experiences/private-safari.jpg', 0, 8)
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
-
--- Vehicles
-INSERT INTO vehicles (name, slug, category, capacity, price_per_day, description, features, image_url) VALUES
-('Toyota Vellfire', 'toyota-vellfire', 'vellfire', 6, 18000,
- 'Executive VIP van for airport runs and city transfers.',
- 'Leather seats|AC|Wi-Fi option|Bottled water',
- 'assets/images/vehicles/01-vellfire.jpg'),
-('Safari Tour Van', 'safari-tour-van', 'safari_van', 8, 15000,
- 'Pop-up roof safari van built for game drives.',
- 'Pop-up roof|Charging ports|Cooler box|Experienced driver-guide',
- 'assets/images/vehicles/02-safari-van.jpg'),
-('Land Cruiser 4x4', 'land-cruiser-4x4', 'land_cruiser', 6, 22000,
- 'Rugged 4x4 for rough tracks and remote parks.',
- '4WD|High clearance|Roof hatch|Safari seating',
- 'assets/images/vehicles/03-land-cruiser.jpg'),
-('Airport Transfer', 'airport-transfer', 'transfer', 4, 5000,
- 'JKIA and Wilson meet-and-greet with fixed rates.',
- 'Flight tracking|Meet & greet|Child seats on request',
- 'assets/images/vehicles/04-airport.jpg'),
-('Chauffeur Service', 'chauffeur-service', 'chauffeur', 3, 12000,
- 'Hourly or full-day private chauffeur in Nairobi and beyond.',
- 'Professional driver|Flexible hours|Discreet service',
- 'assets/images/vehicles/05-chauffeur.jpg'),
-('Wedding & Event Fleet', 'wedding-event-fleet', 'event', 12, 25000,
- 'Decor-ready cars and vans for weddings and corporate events.',
- 'Decor coordination|Multiple vehicles|On-time logistics',
- 'assets/images/vehicles/06-wedding.jpg')
-ON CONFLICT (slug) DO UPDATE SET
-  name = EXCLUDED.name,
-  image_url = EXCLUDED.image_url;
 
 INSERT INTO drivers (name, phone, license_no, status)
 SELECT v.name, v.phone, v.license_no, v.status

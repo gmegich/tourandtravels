@@ -14,7 +14,7 @@ function package_details_map(): array
             'ideal_for' => 'First-time safari guests, couples, photographers',
             'highlights' => 'Dawn & afternoon game drives|Big cat tracking with expert guide|Optional hot-air balloon add-on|Sundowner experience',
             'description' => 'Three carefully paced days in Kenya’s most famous reserve. We balance early game drives with rest time so you stay sharp for wildlife — not exhausted by the road. Stay options range from mid-range camps to luxury lodges; tell us your budget and we shape the stay around it.',
-            'inclusions' => 'Private safari vehicle with pop-up roof|English-speaking driver-guide|Park entry guidance & logistics|Bottled water on drives|Meet & greet in Nairobi or airstrip transfer coordination',
+            'inclusions' => 'Guided game drives|English-speaking safari guide|Park entry guidance & logistics|Bottled water on drives|Arrival meet & greet coordination',
             'exclusions' => 'International flights|Personal travel insurance|Alcoholic drinks|Hot-air balloon safari (optional extra)|Tips / gratuities',
             'itinerary' => [
                 ['day' => 1, 'title' => 'Nairobi to Maasai Mara', 'body' => 'Depart Nairobi after breakfast (or meet on a scheduled flight into the Mara). Scenic drive via the Rift Valley escarpment with photo stops. Afternoon game drive on arrival. Settle into camp and evening briefing.'],
@@ -27,7 +27,7 @@ function package_details_map(): array
             'ideal_for' => 'Short escapes, photographers, Kilimanjaro views',
             'highlights' => 'Elephant herds on open plains|Mount Kilimanjaro backdrop|Observation Hill panorama|Birdlife around wetlands',
             'description' => 'A compact Amboseli safari ideal as a weekend break from Nairobi or a photography-focused add-on. Clear mornings often reveal Kilimanjaro above the elephants — we time drives for the best light.',
-            'inclusions' => 'Private 4x4 or safari van|Driver-guide|Park fee support|Bottled water|Flexible Nairobi pickup/drop',
+            'inclusions' => 'Guided game drives|Safari guide|Park fee support|Bottled water|Flexible Nairobi start/end',
             'exclusions' => 'Flights|Insurance|Meals unless stated in quote|Tips',
             'itinerary' => [
                 ['day' => 1, 'title' => 'Nairobi to Amboseli', 'body' => 'Morning departure south toward Amboseli. Afternoon game drive across the dusty plains and swamps. Overnight near the park.'],
@@ -38,8 +38,8 @@ function package_details_map(): array
             'destination_name' => 'Diani Beach',
             'ideal_for' => 'Couples, honeymooners, post-safari unwind',
             'highlights' => 'White-sand beach time|Optional dhow / snorkeling|Colobus Conservation visit|Fresh seafood evenings',
-            'description' => 'Four days on Kenya’s south coast after a safari — or as a standalone beach holiday. We arrange road or flight transfers, hotel recommendations, and optional water activities so your only decision is how slow to go.',
-            'inclusions' => 'Transfer options (road or flight coordination)|Hotel booking support|Local activity tips|WhatsApp concierge during stay',
+            'description' => 'Four days on Kenya’s south coast after a safari — or as a standalone beach holiday. We arrange flights or road links, hotel recommendations, and optional water activities so your only decision is how slow to go.',
+            'inclusions' => 'Flight or road link coordination|Hotel booking support|Local activity tips|WhatsApp concierge during stay',
             'exclusions' => 'Flights unless quoted|Meals & drinks|Watersports fees|Travel insurance',
             'itinerary' => [
                 ['day' => 1, 'title' => 'Arrive Diani', 'body' => 'Transfer from Ukunda airstrip or Mombasa. Check in, beach time, and a light evening.'],
@@ -53,7 +53,7 @@ function package_details_map(): array
             'ideal_for' => 'Arrival/departure days, short stopovers',
             'highlights' => 'Nairobi National Park|Giraffe Centre|Karen Blixen / Sheldrick options|City dining tips',
             'description' => 'A full private day in Nairobi designed around your flight times. Ideal when you land early or leave late and want wildlife without leaving the capital.',
-            'inclusions' => 'Private vehicle & guide|Flexible itinerary|Entrance fee guidance|Bottled water',
+            'inclusions' => 'Private city guide|Flexible itinerary|Entrance fee guidance|Bottled water',
             'exclusions' => 'Park & attraction tickets (pay on site or prepay)|Meals|Tips',
             'itinerary' => [
                 ['day' => 1, 'title' => 'City safari day', 'body' => 'Morning Nairobi National Park game drive. Midday Giraffe Centre. Afternoon Karen heritage stop or elephant orphanage (seasonal schedules). Drop at hotel or airport.'],
@@ -77,9 +77,9 @@ function package_details_map(): array
         'family-mara-adventure' => [
             'destination_name' => 'Maasai Mara',
             'ideal_for' => 'Families with children, multi-generation groups',
-            'highlights' => 'Shorter game drives|Kid-friendly camps|Flexible meal stops|Safe family vehicles',
+            'highlights' => 'Shorter game drives|Kid-friendly camps|Flexible meal stops|Family-friendly pacing',
             'description' => 'A four-day Mara safari paced for families. Shorter morning drives, lodge pools when needed, and guides who enjoy sharing wildlife stories with kids.',
-            'inclusions' => 'Family-sized safari vehicle|Guide experienced with children|Flexible schedule|Park logistics',
+            'inclusions' => 'Family-paced game drives|Guide experienced with children|Flexible schedule|Park logistics',
             'exclusions' => 'Flights|Insurance|Extra activities|Tips',
             'itinerary' => [
                 ['day' => 1, 'title' => 'Travel to the Mara', 'body' => 'Comfortable transfer with snack stops. Soft afternoon drive. Settle into family rooms/tents.'],
@@ -91,12 +91,12 @@ function package_details_map(): array
         'coast-honeymoon-escape' => [
             'destination_name' => 'Diani Beach',
             'ideal_for' => 'Honeymooners, anniversary couples',
-            'highlights' => 'Private transfers|Romantic beach stay tips|Optional candlelit dinner|Slow pacing',
-            'description' => 'Five days designed for newlyweds: seamless transfers, quiet beach hotels or villas, and optional add-ons like a private dhow sunset. Pair with a short Amboseli or Mara safari if you want wildlife first.',
-            'inclusions' => 'Private airport/airstrip transfers|Stay recommendations & booking support|Honeymoon extras coordination|WhatsApp planner',
+            'highlights' => 'Seamless arrivals|Romantic beach stay tips|Optional candlelit dinner|Slow pacing',
+            'description' => 'Five days designed for newlyweds: seamless arrivals, quiet beach hotels or villas, and optional add-ons like a private dhow sunset. Pair with a short Amboseli or Mara safari if you want wildlife first.',
+            'inclusions' => 'Airport/airstrip arrival support|Stay recommendations & booking support|Honeymoon extras coordination|WhatsApp planner',
             'exclusions' => 'Flights|Meals not specified|Spa treatments|Insurance',
             'itinerary' => [
-                ['day' => 1, 'title' => 'Arrive in style', 'body' => 'Private pickup and check-in. Evening free for beach or spa.'],
+                ['day' => 1, 'title' => 'Arrive in style', 'body' => 'Meet on arrival and check in. Evening free for beach or spa.'],
                 ['day' => 2, 'title' => 'Beach day', 'body' => 'Leisure morning. Optional couple’s massage or snorkeling.'],
                 ['day' => 3, 'title' => 'Romance add-on', 'body' => 'Optional private dinner setup or dhow sunset cruise.'],
                 ['day' => 4, 'title' => 'Free day', 'body' => 'Fully flexible — we help book any last activities.'],
@@ -107,17 +107,17 @@ function package_details_map(): array
             'destination_name' => 'Custom East Africa',
             'ideal_for' => 'Travelers with specific dates, interests, or multi-country plans',
             'highlights' => 'Fully tailored routing|Mix safari + beach + culture|Cross-border options|One dedicated planner',
-            'description' => 'Tell us your dates, group size, budget band, and must-sees. We reply with a clear outline: nights per park, vehicle type, estimated costs, and alternatives. Ideal for Serengeti add-ons, gorilla permits planning, or corporate incentive groups.',
-            'inclusions' => 'Dedicated trip planner|Custom itinerary PDF|Vehicle & lodge coordination|WhatsApp support throughout',
+            'description' => 'Tell us your dates, group size, budget band, and must-sees. We reply with a clear outline: nights per park, lodge options, estimated costs, and alternatives. Ideal for Serengeti add-ons, gorilla permits planning, or corporate incentive groups.',
+            'inclusions' => 'Dedicated trip planner|Custom itinerary PDF|Lodge & activity coordination|WhatsApp support throughout',
             'exclusions' => 'Depends on final plan — listed clearly in your quote',
             'itinerary' => [
                 ['day' => 1, 'title' => 'Inquiry & discovery', 'body' => 'Share dates, travelers, interests, and budget. We confirm feasibility within hours.'],
                 ['day' => 2, 'title' => 'Draft itinerary', 'body' => 'You receive a day-by-day outline with lodge options and rough costing.'],
-                ['day' => 3, 'title' => 'Refine & confirm', 'body' => 'Adjust pace, rooms, and activities. Pay deposit to lock lodges and vehicles.'],
+                ['day' => 3, 'title' => 'Refine & confirm', 'body' => 'Adjust pace, rooms, and activities. Pay deposit to lock lodges and key bookings.'],
                 ['day' => 4, 'title' => 'Pre-trip briefing', 'body' => 'Packing list, park rules, contacts, and emergency plan shared before travel.'],
                 ['day' => 5, 'title' => 'On-trip support', 'body' => 'Your planner stays reachable on WhatsApp for changes while you travel.'],
                 ['day' => 6, 'title' => 'Flexible middle days', 'body' => 'Safari, beach, or city blocks as designed for your group.'],
-                ['day' => 7, 'title' => 'Departure', 'body' => 'Airport transfer and trip wrap-up. Feedback welcome for future travel.'],
+                ['day' => 7, 'title' => 'Departure', 'body' => 'Departure support and trip wrap-up. Feedback welcome for future travel.'],
             ],
         ],
     ];
@@ -154,7 +154,7 @@ function destination_details_map(): array
             'description' => 'Kenya’s capital is also a wildlife gateway: Nairobi National Park sits against the skyline. Use arrival or departure days for giraffe centres, museums, and Karen heritage before heading to the parks.',
             'wildlife' => 'Rhino|Lion|Giraffe|Buffalo|Urban birdlife',
             'activities' => 'Nairobi National Park|Giraffe Centre|Sheldrick orphanage (booking required)|City markets & dining',
-            'getting_there' => 'JKIA and Wilson Airport; we arrange meet-and-greet and hotel transfers.',
+            'getting_there' => 'JKIA and Wilson Airport; we arrange meet-and-greet and hotel handovers.',
         ],
         'naivasha' => [
             'description' => 'Lake Naivasha is a calm Rift Valley stop — boat rides among hippos, Crescent Island walking safari, and Hell’s Gate cycling or hiking. Perfect between Nairobi and the Mara.',
@@ -181,7 +181,7 @@ function destination_details_map(): array
             'getting_there' => 'Flights via Dar es Salaam, Zanzibar (ZNZ), or regional connections we arrange.',
         ],
         'uganda-tanzania' => [
-            'description' => 'Cross-border journeys for gorilla trekking in Uganda or Serengeti / Ngorongoro extensions in Tanzania. We handle permits guidance, border logistics, and seamless vehicle or flight connections.',
+            'description' => 'Cross-border journeys for gorilla trekking in Uganda or Serengeti / Ngorongoro extensions in Tanzania. We handle permits guidance, border logistics, and seamless flight or overland connections.',
             'wildlife' => 'Mountain gorilla|Chimpanzee|Serengeti migration|Ngorongoro crater wildlife',
             'activities' => 'Gorilla trekking|Serengeti drives|Crater descent|Multi-country routing',
             'getting_there' => 'Regional flights and overland links planned around permit dates.',
@@ -194,12 +194,12 @@ function site_faqs(): array
     return [
         ['q' => 'How do I start planning a trip?', 'a' => 'Send your dates, number of travelers, preferred destinations, and budget band via our booking form or WhatsApp. We reply with a clear outline and options — usually within a few hours during the day.'],
         ['q' => 'Are park fees included?', 'a' => 'It depends on the package. Your quote always lists what is included and excluded. Many itineraries include park-fee guidance and logistics; some fees are paid separately or prepaid on your behalf.'],
-        ['q' => 'What vehicles do you use?', 'a' => 'Safari vans with pop-up roofs, Land Cruiser 4x4s for rougher parks, and Toyota Vellfire or similar for VIP city and airport transfers. See our Transport page for the fleet.'],
-        ['q' => 'Can you arrange flights inside Kenya?', 'a' => 'Yes. We coordinate scheduled safari flights (for example Nairobi–Mara) and advise when flying saves time versus road transfers.'],
+        ['q' => 'What kinds of trips can you plan?', 'a' => 'Safari packages (private or group joining), beach extensions, honeymoons, family holidays, Mount Kenya treks, Nairobi stopovers, and custom multi-country East Africa itineraries.'],
+        ['q' => 'Can you arrange flights inside Kenya?', 'a' => 'Yes. We coordinate scheduled safari flights (for example Nairobi–Mara) and advise when flying saves time versus road links between parks.'],
         ['q' => 'Is travel insurance required?', 'a' => 'Strongly recommended for all guests, and mandatory for mountain treks. We can outline what cover to look for (medical, evacuation, trip interruption).'],
         ['q' => 'Do you offer custom and multi-country trips?', 'a' => 'Yes. Custom Private Tour covers tailored Kenya circuits plus Tanzania or Uganda extensions, including gorilla-permit timing guidance.'],
         ['q' => 'What is the best time for the Great Migration?', 'a' => 'In the Maasai Mara, river crossings are most likely July–October, but exact timing shifts yearly. We monitor conditions and adjust routing when possible.'],
-        ['q' => 'How do payments and confirmation work?', 'a' => 'After you approve the itinerary, a deposit secures lodges and vehicles. Balance timing is stated in your quote. You receive a written confirmation and emergency contacts before travel.'],
+        ['q' => 'How do payments and confirmation work?', 'a' => 'After you approve the itinerary, a deposit secures lodges and key bookings. Balance timing is stated in your quote. You receive a written confirmation and emergency contacts before travel.'],
     ];
 }
 
@@ -207,8 +207,8 @@ function planning_steps(): array
 {
     return [
         ['num' => '01', 'title' => 'Share your brief', 'body' => 'Dates, travelers, interests (wildlife, beach, hiking), pace, and budget. WhatsApp or the booking form both work.'],
-        ['num' => '02', 'title' => 'Receive a clear plan', 'body' => 'We send a day-by-day outline with lodge tiers, vehicle type, and an itemized estimate so nothing feels vague.'],
-        ['num' => '03', 'title' => 'Refine together', 'body' => 'Swap lodges, add a balloon safari, shorten drives, or insert a beach ending — we revise until it fits.'],
+        ['num' => '02', 'title' => 'Receive a clear plan', 'body' => 'We send a day-by-day outline with lodge tiers, activities, and an itemized estimate so nothing feels vague.'],
+        ['num' => '03', 'title' => 'Refine together', 'body' => 'Swap lodges, add a balloon safari, adjust pace, or insert a beach ending — we revise until it fits.'],
         ['num' => '04', 'title' => 'Confirm & travel', 'body' => 'Deposit locks the trip. You get vouchers, contacts, and packing notes. Your planner stays on WhatsApp throughout.'],
     ];
 }
@@ -218,7 +218,7 @@ function experience_cards(): array
     return [
         ['title' => 'Wildlife safaris', 'text' => 'Maasai Mara, Amboseli, Tsavo, Samburu — paced game drives with guides who know the land.', 'href' => 'tours.php?filter=safari', 'image' => 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80'],
         ['title' => 'Beach escapes', 'text' => 'Diani and Mombasa coast time after safari — or a standalone sand-and-sea holiday.', 'href' => 'tours.php?filter=beach', 'image' => 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80'],
-        ['title' => 'Honeymoons', 'text' => 'Private transfers, romantic stays, and optional safari–beach combinations.', 'href' => 'tours.php?filter=honeymoon', 'image' => 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=900&q=80'],
+        ['title' => 'Honeymoons', 'text' => 'Romantic stays and optional safari–beach combinations planned around your dates.', 'href' => 'tours.php?filter=honeymoon', 'image' => 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=900&q=80'],
         ['title' => 'Family journeys', 'text' => 'Softer schedules, family rooms, and guides who make wildlife fun for kids.', 'href' => 'tours.php?filter=family', 'image' => 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80'],
         ['title' => 'Mountain treks', 'text' => 'Mount Kenya routes with guides, porters, and safety-first pacing.', 'href' => 'tours.php?filter=mountain', 'image' => 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80'],
         ['title' => 'Private & custom', 'text' => 'Built around your dates — including Tanzania and Uganda extensions.', 'href' => 'tour.php?slug=custom-private-tour', 'image' => 'assets/images/experiences/private-safari.jpg'],

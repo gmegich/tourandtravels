@@ -1,6 +1,6 @@
 # Nyika Safaris — Kenya Tour & Travel Website
 
-Premium booking-focused tour and travel site for Kenya safaris, beach holidays, and private transport. Built for **XAMPP (PHP)** with **Supabase (Postgres)** as the database.
+Premium booking-focused safari and tour site for Kenya packages, beach holidays, and East African trip planning. Built for **XAMPP (PHP)** with **Supabase (Postgres)** as the database.
 
 ## Contact
 
@@ -78,15 +78,15 @@ Prefer `.env` (see `.env.example`). Key settings:
 ## What’s included
 
 ### Public site
-- Home: full-bleed hero, trip search → book form, featured destinations, popular packages, why us, reviews, WhatsApp CTA
-- Tours & packages (filterable categories)
+- Home: full-bleed hero, trip search → book form, featured destinations, safari packages, experiences, planning steps, FAQ, reviews, WhatsApp CTA
+- Tours & packages (filterable categories) with full itineraries
 - Destinations (Kenya + Zanzibar / regional)
-- Vehicles & transport
+- Plan & FAQ
 - About
 - Contact / Book Now form (writes inquiry + customer + booking)
 
 ### Admin
-Login-protected CRUD / management for packages, destinations, vehicles, bookings (status + driver assignment), customers, payments (M-Pesa fields), drivers, tour schedules, expenses/profit summary, inquiries.
+Login-protected CRUD / management for packages, destinations, bookings, customers, payments (M-Pesa fields), tour schedules, expenses/profit summary, inquiries.
 
 ### Deferred / placeholders
 - Live M-Pesa STK Push (schema + admin recording ready; no Daraja calls)
@@ -95,12 +95,12 @@ Login-protected CRUD / management for packages, destinations, vehicles, bookings
 ## Folder structure
 
 ```
-├── index.php, tours.php, destinations.php, vehicles.php, about.php, contact.php
+├── index.php, tours.php, tour.php, destinations.php, plan.php, faq.php, about.php, contact.php
 ├── install.php          (verifies Supabase + resets admin password)
 ├── api/book.php
 ├── assets/css/style.css
 ├── assets/js/main.js
-├── includes/            (config, db, functions, content, header, footer)
+├── includes/            (config, db, functions, content, details, header, footer)
 ├── admin/               (dashboard + CRUD modules)
 ├── database/
 │   ├── supabase_schema.sql   ← use this in Supabase

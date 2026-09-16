@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 
 $page_title = 'How trip planning works — ' . SITE_NAME;
-$page_description = 'From first WhatsApp message to airport drop — how Nyika Safaris plans Kenya safaris and tours.';
+$page_description = 'From first WhatsApp message to confirmed itinerary — how Nyika Safaris plans Kenya safaris and East African tours.';
 $steps = planning_steps();
 
 require __DIR__ . '/includes/header.php';
@@ -12,7 +12,7 @@ require __DIR__ . '/includes/header.php';
 <section class="page-hero">
   <div class="page-hero-media">
     <?= img_tag('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800', [
-        'alt' => 'Open road through East African landscape',
+        'alt' => 'Travelers exploring an East African landscape',
         'width' => 1800,
         'height' => 900,
         'loading' => 'eager',
@@ -47,9 +47,9 @@ require __DIR__ . '/includes/header.php';
 <section class="section section-tone">
   <div class="shell prose reveal">
     <h2>What you receive before you pay</h2>
-    <p>Every serious inquiry gets a day-by-day outline, lodge or camp options in your budget band, vehicle type (safari van, Land Cruiser, or Vellfire transfer), and a line-item estimate. Inclusions and exclusions are listed so park fees and extras never surprise you.</p>
+    <p>Every serious inquiry gets a day-by-day outline, lodge or camp options in your budget band, and a line-item estimate. Inclusions and exclusions are listed so park fees and extras never surprise you.</p>
     <h2>While you travel</h2>
-    <p>Your planner stays on WhatsApp for flight changes, room requests, and on-ground questions. Drivers carry local knowledge of park gates, fuel stops, and safe pacing for families or photographers.</p>
+    <p>Your planner stays on WhatsApp for flight changes, room requests, and on-ground questions. Local guides share park knowledge, safe pacing for families, and the best windows for wildlife.</p>
     <p class="form-actions" style="margin-top:1.5rem">
       <a class="btn btn-primary" href="contact.php">Start planning</a>
       <a class="btn btn-outline" href="faq.php">Read FAQs</a>

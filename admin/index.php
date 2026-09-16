@@ -9,12 +9,10 @@ $admin_title = 'Dashboard';
 $stats = [
     'Packages' => count_rows('packages'),
     'Destinations' => count_rows('destinations'),
-    'Vehicles' => count_rows('vehicles'),
     'Bookings' => count_rows('bookings'),
     'Customers' => count_rows('customers'),
     'Inquiries' => count_rows('inquiries'),
     'Payments' => count_rows('payments'),
-    'Drivers' => count_rows('drivers'),
 ];
 
 $recentBookings = fetch_all(

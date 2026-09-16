@@ -6,17 +6,17 @@ declare(strict_types=1);
     <div class="shell footer-grid">
       <div class="footer-brand">
         <p class="footer-name"><?= e(SITE_NAME) ?></p>
-        <p class="footer-tag"><?= e(SITE_TAGLINE) ?> — safaris, coast escapes, and private journeys across East Africa.</p>
+        <p class="footer-tag"><?= e(SITE_TAGLINE) ?> — safari packages, beach extensions, and trip planning across East Africa.</p>
       </div>
       <div>
         <p class="footer-heading">Explore</p>
         <ul class="footer-links">
-          <li><a href="tours.php">Tour packages</a></li>
+          <li><a href="tours.php">Safari packages</a></li>
           <li><a href="destinations.php">Destinations</a></li>
-          <li><a href="vehicles.php">Vehicles & transport</a></li>
           <li><a href="plan.php">How planning works</a></li>
           <li><a href="faq.php">FAQ</a></li>
           <li><a href="about.php">About us</a></li>
+          <li><a href="contact.php">Book a trip</a></li>
         </ul>
       </div>
       <div>

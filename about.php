@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 
 $page_title = 'About Us — ' . SITE_NAME;
-$page_description = 'Nyika Safaris is a Nairobi-based tour and transport company crafting detailed Kenya safaris, coast escapes, and East Africa extensions.';
+$page_description = 'Nyika Safaris is a Nairobi-based safari and trip-planning company crafting detailed Kenya packages, beach extensions, and East Africa journeys.';
 $steps = planning_steps();
 
 require __DIR__ . '/includes/header.php';
@@ -22,29 +22,29 @@ require __DIR__ . '/includes/header.php';
   </div>
   <div class="page-hero-content">
     <h1>About <?= e(SITE_NAME) ?></h1>
-    <p>Locally rooted travel planning with the detail of a specialist safari agency.</p>
+    <p>Locally rooted safari planning with the detail of a specialist East African travel agency.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="shell">
     <div class="prose reveal">
-      <p><strong><?= e(SITE_NAME) ?></strong> designs Kenya journeys that feel considered — not rushed. We combine safari expertise, coastal knowledge, and a reliable transport fleet so your trip reads as one clear story from arrival to departure.</p>
-      <p>Like the best East African trip planners, we start with your dates and interests, then build a written itinerary: nights per park, vehicle type, lodge tier, and what is (and is not) included. Whether you need a classic Maasai Mara circuit, a Diani honeymoon, a Mount Kenya trek, or a private multi-country extension into Tanzania or Uganda, our planners stay with you on WhatsApp and email until you are home.</p>
+      <p><strong><?= e(SITE_NAME) ?></strong> designs Kenya journeys that feel considered — not rushed. We plan safari packages, coastal extensions, and private itineraries so your trip reads as one clear story from arrival to departure.</p>
+      <p>Like the best East African trip planners, we start with your dates and interests, then build a written itinerary: nights per park, lodge tier, activities, and what is (and is not) included. Whether you need a classic Maasai Mara circuit, a Diani honeymoon, a Mount Kenya trek, or a private multi-country extension into Tanzania or Uganda, our planners stay with you on WhatsApp and email until you are home.</p>
       <div class="stats-row">
         <div class="stat"><strong>10+</strong><span>Years guiding trips</span></div>
         <div class="stat"><strong>500+</strong><span>Trips arranged</span></div>
         <div class="stat"><strong>24/7</strong><span>WhatsApp support</span></div>
       </div>
-      <h2>What we handle</h2>
+      <h2>What we help you experience</h2>
       <ul class="check-list">
         <li>Safari circuits across Mara, Amboseli, Tsavo, Samburu, and Naivasha</li>
         <li>Beach extensions on the south and north coast</li>
-        <li>Airport meet-and-greet and VIP Vellfire transfers</li>
+        <li>Group joining and private safari options</li>
         <li>Family, honeymoon, and photography-focused pacing</li>
         <li>Cross-border planning for Tanzania and Uganda</li>
       </ul>
-      <p>Based in Westlands, Nairobi, we operate safari vans, Land Cruisers, executive Vellfire transfers, and event transport — with drivers who know both park gates and city traffic.</p>
+      <p>Based in Westlands, Nairobi, we work with trusted local guides and lodges so visitors and tourists get clear plans, honest advice, and support on the ground.</p>
     </div>
   </div>
 </section>
@@ -65,7 +65,7 @@ require __DIR__ . '/includes/header.php';
       <?php endforeach; ?>
     </div>
     <p class="reveal" style="margin-top:2rem">
-      <a class="btn btn-primary" href="contact.php">Start your booking</a>
+      <a class="btn btn-primary" href="contact.php">Start planning</a>
       <a class="btn btn-outline" href="plan.php">Full planning guide</a>
     </p>
   </div>

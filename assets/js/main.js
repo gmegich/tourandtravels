@@ -64,7 +64,7 @@
     reveals.forEach((el) => io.observe(el));
   }
 
-  // Category filters on tours / vehicles
+  // Category filters on tours
   document.querySelectorAll("[data-filter-group]").forEach((group) => {
     const chips = group.querySelectorAll("[data-filter]");
     const items = document.querySelectorAll("[data-category]");
