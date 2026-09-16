@@ -1,0 +1,113 @@
+/* Admin UI — compact operational chrome */
+:root {
+  --a-bg: #eef1ee;
+  --a-panel: #ffffff;
+  --a-ink: #1a1c19;
+  --a-muted: #5c635c;
+  --a-line: #d7ddd8;
+  --a-forest: #0f3d2e;
+  --a-gold: #c4a35a;
+  --a-danger: #9b2c2c;
+  --font: "Sora", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--a-bg);
+  color: var(--a-ink);
+  min-height: 100vh;
+}
+a { color: var(--a-forest); }
+.admin-shell { display: grid; min-height: 100vh; }
+@media (min-width: 920px) {
+  .admin-shell { grid-template-columns: 240px 1fr; }
+}
+.admin-side {
+  background: var(--a-forest);
+  color: rgba(255,255,255,.86);
+  padding: 1.25rem 1rem 2rem;
+}
+.admin-side a { color: inherit; text-decoration: none; }
+.admin-brand {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+  color: #fff;
+}
+.admin-nav { display: grid; gap: .2rem; }
+.admin-nav a {
+  padding: .55rem .7rem;
+  border-radius: 2px;
+  font-size: .9rem;
+}
+.admin-nav a:hover,
+.admin-nav a.is-active { background: rgba(255,255,255,.1); }
+.admin-main { padding: 1.25rem; }
+.admin-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.admin-top h1 { margin: 0; font-size: 1.45rem; font-family: Georgia, serif; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background: var(--a-panel);
+  border: 1px solid var(--a-line);
+  padding: 1rem;
+}
+.stat-card strong { display: block; font-size: 1.6rem; color: var(--a-forest); }
+.stat-card span { font-size: .8rem; color: var(--a-muted); }
+.panel {
+  background: var(--a-panel);
+  border: 1px solid var(--a-line);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+th, td { text-align: left; padding: .65rem .5rem; border-bottom: 1px solid var(--a-line); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--a-muted); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 2.4rem; padding: .45rem .9rem; border: 1px solid transparent;
+  background: var(--a-forest); color: #fff; text-decoration: none; font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+}
+.btn-ghost { background: transparent; color: var(--a-forest); border-color: var(--a-line); }
+.btn-danger { background: var(--a-danger); }
+.btn-sm { min-height: 2rem; padding: .3rem .65rem; font-size: .8rem; }
+.field { margin-bottom: .85rem; }
+.field label { display: block; font-size: .78rem; font-weight: 600; margin-bottom: .3rem; color: var(--a-muted); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 2.5rem; border: 1px solid var(--a-line); padding: .5rem .65rem; font: inherit; background: #fafbfa;
+}
+.field textarea { min-height: 6rem; }
+.grid-2 { display: grid; gap: .85rem; }
+@media (min-width: 700px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+.alert { padding: .75rem .9rem; margin-bottom: 1rem; border: 1px solid var(--a-line); }
+.alert-success { background: #ecf8f0; color: #166534; }
+.alert-error { background: #fdf2f2; color: var(--a-danger); }
+.badge {
+  display: inline-block; padding: .15rem .45rem; font-size: .72rem; font-weight: 600;
+  background: #e7ece8; color: var(--a-forest); text-transform: uppercase; letter-spacing: .03em;
+}
+.login-wrap {
+  min-height: 100vh; display: grid; place-items: center; padding: 1rem;
+  background: linear-gradient(145deg, #0a2a1f, #0f3d2e 50%, #1a4d3a);
+}
+.login-box {
+  width: min(400px, 100%); background: #fff; padding: 1.75rem; border: 1px solid #d7ddd8;
+}
+.login-box h1 { font-family: Georgia, serif; margin: 0 0 .35rem; font-size: 1.5rem; color: var(--a-forest); }
+.muted { color: var(--a-muted); font-size: .9rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.row-actions { white-space: nowrap; }
+.note { font-size: .85rem; color: var(--a-muted); }
