@@ -14,6 +14,8 @@ declare(strict_types=1);
           <li><a href="tours.php">Tour packages</a></li>
           <li><a href="destinations.php">Destinations</a></li>
           <li><a href="vehicles.php">Vehicles & transport</a></li>
+          <li><a href="plan.php">How planning works</a></li>
+          <li><a href="faq.php">FAQ</a></li>
           <li><a href="about.php">About us</a></li>
         </ul>
       </div>

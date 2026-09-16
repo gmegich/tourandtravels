@@ -14,6 +14,9 @@ if (count($packages) < 3) {
 $dest_options = get_destinations(false);
 $hero_image = 'https://images.unsplash.com/photo-1516426122078-c23e76319801';
 $preload_image = optimize_image_url($hero_image, 1400);
+$experiences = experience_cards();
+$steps = planning_steps();
+$faqs = array_slice(site_faqs(), 0, 4);
 
 require __DIR__ . '/includes/header.php';
 ?>
@@ -103,7 +106,7 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="package-list">
       <?php foreach ($packages as $p): ?>
-        <a class="package-item reveal" href="contact.php?package=<?= e(urlencode($p['title'])) ?>">
+        <a class="package-item reveal" href="tour.php?slug=<?= e(urlencode((string) $p['slug'])) ?>">
           <?= img_tag((string) $p['image_url'], [
               'alt' => (string) $p['title'],
               'width' => 640,
@@ -118,11 +121,56 @@ require __DIR__ . '/includes/header.php';
               <span><?= (int) $p['duration_days'] ?> days</span>
               <span><?= (float) $p['price_from'] > 0 ? 'From ' . money_kes($p['price_from']) : 'Custom quote' ?></span>
             </div>
+            <span class="package-link-hint">View full itinerary →</span>
           </div>
         </a>
       <?php endforeach; ?>
     </div>
     <p style="margin-top:1.75rem"><a class="btn btn-outline" href="tours.php">All packages</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2>Travel experiences</h2>
+      <p>Choose a style of journey — then open a full itinerary with inclusions and day-by-day detail.</p>
+    </div>
+    <div class="experience-grid">
+      <?php foreach ($experiences as $ex): ?>
+        <a class="experience-card reveal" href="<?= e($ex['href']) ?>">
+          <?= img_tag(str_starts_with($ex['image'], 'assets/') ? asset_url($ex['image']) : $ex['image'], [
+              'alt' => $ex['title'],
+              'width' => 720,
+              'height' => 480,
+              'sizes' => '(max-width: 700px) 100vw, 33vw',
+          ]) ?>
+          <div class="experience-body">
+            <h3><?= e($ex['title']) ?></h3>
+            <p><?= e($ex['text']) ?></p>
+          </div>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tone">
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2>How planning works</h2>
+      <p>A transparent path from first message to confirmed itinerary — the standard of a detailed safari planner.</p>
+    </div>
+    <div class="steps-grid">
+      <?php foreach ($steps as $s): ?>
+        <article class="step-card reveal">
+          <span class="why-num"><?= e($s['num']) ?></span>
+          <h3><?= e($s['title']) ?></h3>
+          <p><?= e($s['body']) ?></p>
+        </article>
+      <?php endforeach; ?>
+    </div>
+    <p class="reveal" style="margin-top:1.75rem"><a class="btn btn-outline" href="plan.php">Full planning guide</a></p>
   </div>
 </section>
 
@@ -172,6 +220,24 @@ require __DIR__ . '/includes/header.php';
         <cite>The Okello family · Kenya</cite>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2>Common questions</h2>
+      <p>Park fees, vehicles, migration timing, and how booking works.</p>
+    </div>
+    <div class="faq-list" style="max-width:48rem">
+      <?php foreach ($faqs as $i => $faq): ?>
+        <details class="faq-item reveal"<?= $i === 0 ? ' open' : '' ?>>
+          <summary><?= e($faq['q']) ?></summary>
+          <p><?= e($faq['a']) ?></p>
+        </details>
+      <?php endforeach; ?>
+    </div>
+    <p class="reveal" style="margin-top:1.5rem"><a class="btn btn-outline" href="faq.php">All FAQs</a></p>
   </div>
 </section>
 

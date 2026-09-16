@@ -3,7 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 
 $page_title = 'Destinations — ' . SITE_NAME;
-$page_description = 'Explore Maasai Mara, Amboseli, Diani, Mombasa, Nairobi, Naivasha, Samburu, Tsavo, Zanzibar, and East Africa extensions.';
+$page_description = 'In-depth Kenya and East Africa destinations: Maasai Mara, Amboseli, Diani, Samburu, Tsavo, Zanzibar, and more — wildlife, activities, and how to get there.';
 $destinations = get_destinations(false);
 
 require __DIR__ . '/includes/header.php';
@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
   </div>
   <div class="page-hero-content">
     <h1>Destinations</h1>
-    <p>Kenya’s great parks and coast — plus Zanzibar and regional extensions when you want more.</p>
+    <p>Park-by-park detail — wildlife, activities, best seasons, and how we get you there.</p>
   </div>
 </section>
 
@@ -45,11 +45,31 @@ require __DIR__ . '/includes/header.php';
             <p class="package-cat" style="margin-bottom:0.6rem"><?= e(($d['region'] ?? '') . (!empty($d['country']) ? ' · ' . $d['country'] : '')) ?></p>
             <p><?= e($d['description'] ?? $d['short_description'] ?? '') ?></p>
             <?php if (!empty($d['highlights'])): ?>
+              <h4 class="mini-label">Highlights</h4>
               <ul class="feature-list">
-                <?php foreach (explode('|', (string) $d['highlights']) as $h): ?>
-                  <li><?= e(trim($h)) ?></li>
+                <?php foreach (pipe_list((string) $d['highlights']) as $h): ?>
+                  <li><?= e($h) ?></li>
                 <?php endforeach; ?>
               </ul>
+            <?php endif; ?>
+            <?php if (!empty($d['wildlife'])): ?>
+              <h4 class="mini-label">Wildlife</h4>
+              <ul class="feature-list">
+                <?php foreach (pipe_list((string) $d['wildlife']) as $w): ?>
+                  <li><?= e($w) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+            <?php if (!empty($d['activities'])): ?>
+              <h4 class="mini-label">Activities</h4>
+              <ul class="feature-list">
+                <?php foreach (pipe_list((string) $d['activities']) as $a): ?>
+                  <li><?= e($a) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+            <?php if (!empty($d['getting_there'])): ?>
+              <p class="detail-note"><strong>Getting there:</strong> <?= e((string) $d['getting_there']) ?></p>
             <?php endif; ?>
             <?php if (!empty($d['best_time'])): ?>
               <p class="price-tag">Best time: <?= e($d['best_time']) ?></p>

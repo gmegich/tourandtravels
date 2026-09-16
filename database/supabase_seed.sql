@@ -30,7 +30,7 @@ INSERT INTO destinations (name, slug, region, country, short_description, descri
 ('Nairobi', 'nairobi', 'Central', 'Kenya',
  'Safari capital — wildlife parks minutes from the city skyline.',
  'Nairobi blends urban energy with nature: Nairobi National Park, giraffe centres, museums, and nightlife.',
- 'https://images.unsplash.com/photo-1564760055775-d63b17a69c44?w=1600&q=80',
+ 'assets/images/destinations/nairobi.jpg',
  'Nairobi National Park|Giraffe Centre|Karen Blixen|City dining',
  'Year-round', 1, 5),
 ('Lake Naivasha', 'naivasha', 'Rift Valley', 'Kenya',
@@ -54,7 +54,7 @@ INSERT INTO destinations (name, slug, region, country, short_description, descri
 ('Zanzibar', 'zanzibar', 'Indian Ocean', 'Tanzania',
  'Spice islands, Stone Town UNESCO heritage, and dream beaches.',
  'Extend your Kenya safari with Zanzibar''s culture, reefs, and turquoise lagoons.',
- 'https://images.unsplash.com/photo-1586861635166-cdafc3f5b3b5?w=1600&q=80',
+ 'assets/images/destinations/zanzibar.jpg',
  'Stone Town|Nungwi|Spice tours|Snorkeling',
  'June–October & December–February', 1, 9),
 ('Uganda & Tanzania', 'uganda-tanzania', 'East Africa', 'Regional',
@@ -101,7 +101,7 @@ SELECT 'Nairobi City Highlights', 'nairobi-city-highlights', 'city', d.id, 1, 12
   'National park, giraffe centre, and Karen heritage in one day.',
   'Perfect arrival or departure day with private vehicle and guide.',
   'Private vehicle|Guide|Entrance fee support',
-  'https://images.unsplash.com/photo-1564760055775-d63b17a69c44?w=1200&q=80', 0, 4
+  'assets/images/destinations/nairobi.jpg', 0, 4
 FROM destinations d WHERE d.slug = 'nairobi'
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 
@@ -136,7 +136,7 @@ VALUES ('Custom Private Tour', 'custom-private-tour', 'custom', NULL, 7, 0,
   'Built around your dates, pace, and interests.',
   'Tell us your dream itinerary — safari, coast, mountain, or multi-country — and we craft it privately.',
   'Dedicated planner|Private vehicle options|Flexible routing',
-  'https://images.unsplash.com/photo-1488188840666-e962ff04b6e3?w=1200&q=80', 0, 8)
+  'assets/images/experiences/private-safari.jpg', 0, 8)
 ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title;
 
 -- Vehicles

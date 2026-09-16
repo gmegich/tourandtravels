@@ -68,16 +68,17 @@
   document.querySelectorAll("[data-filter-group]").forEach((group) => {
     const chips = group.querySelectorAll("[data-filter]");
     const items = document.querySelectorAll("[data-category]");
-    chips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        chips.forEach((c) => c.classList.remove("is-active"));
-        chip.classList.add("is-active");
-        const value = chip.getAttribute("data-filter");
-        items.forEach((item) => {
-          const cat = item.getAttribute("data-category");
-          item.hidden = !(value === "all" || cat === value);
-        });
+    const apply = (value) => {
+      chips.forEach((c) => c.classList.toggle("is-active", c.getAttribute("data-filter") === value));
+      items.forEach((item) => {
+        const cat = item.getAttribute("data-category");
+        item.hidden = !(value === "all" || cat === value);
       });
+    };
+    const initial = group.getAttribute("data-initial-filter");
+    if (initial) apply(initial);
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => apply(chip.getAttribute("data-filter")));
     });
   });
 

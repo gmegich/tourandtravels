@@ -42,9 +42,10 @@ $preload_image = $preload_image ?? '';
       </button>
       <nav class="site-nav" id="site-nav" data-nav>
         <a class="nav-link<?= nav_active('index.php') ?>" href="index.php">Home</a>
-        <a class="nav-link<?= nav_active('tours.php') ?>" href="tours.php">Tours</a>
+        <a class="nav-link<?= (current_page() === 'tours.php' || current_page() === 'tour.php') ? ' is-active' : '' ?>" href="tours.php">Tours</a>
         <a class="nav-link<?= nav_active('destinations.php') ?>" href="destinations.php">Destinations</a>
         <a class="nav-link<?= nav_active('vehicles.php') ?>" href="vehicles.php">Transport</a>
+        <a class="nav-link<?= nav_active('plan.php') ?>" href="plan.php">Plan</a>
         <a class="nav-link<?= nav_active('about.php') ?>" href="about.php">About</a>
         <a class="nav-link nav-cta<?= nav_active('contact.php') ?>" href="contact.php">Book Now</a>
       </nav>
