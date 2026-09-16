@@ -20,9 +20,9 @@ require __DIR__ . '/includes/header.php';
 
 <section class="page-hero">
   <div class="page-hero-media">
-    <?= img_tag('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800', [
-        'alt' => 'Safari vehicle on an open road',
-        'width' => 1800,
+    <?= img_tag(asset_url('assets/images/vehicles/03-land-cruiser.jpg'), [
+        'alt' => 'Toyota Land Cruiser ready for safari travel',
+        'width' => 1400,
         'height' => 900,
         'loading' => 'eager',
         'fetchpriority' => 'high',

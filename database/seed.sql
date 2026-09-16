@@ -142,28 +142,28 @@ INSERT INTO vehicles (name, slug, category, capacity, price_per_day, description
 ('Toyota Vellfire', 'toyota-vellfire', 'vellfire', 6, 18000,
  'Executive VIP van for airport runs and city transfers.',
  'Leather seats|AC|Wi-Fi option|Bottled water',
- 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&q=80'),
+ 'assets/images/vehicles/01-vellfire.jpg'),
 ('Safari Tour Van', 'safari-tour-van', 'safari_van', 8, 15000,
  'Pop-up roof safari van built for game drives.',
  'Pop-up roof|Charging ports|Cooler box|Experienced driver-guide',
- 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80'),
+ 'assets/images/vehicles/02-safari-van.jpg'),
 ('Land Cruiser 4x4', 'land-cruiser-4x4', 'land_cruiser', 6, 22000,
  'Rugged 4x4 for rough tracks and remote parks.',
  '4WD|High clearance|Roof hatch|Safari seating',
- 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80'),
+ 'assets/images/vehicles/03-land-cruiser.jpg'),
 ('Airport Transfer', 'airport-transfer', 'transfer', 4, 5000,
  'JKIA and Wilson meet-and-greet with fixed rates.',
  'Flight tracking|Meet & greet|Child seats on request',
- 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80'),
+ 'assets/images/vehicles/04-airport.jpg'),
 ('Chauffeur Service', 'chauffeur-service', 'chauffeur', 3, 12000,
  'Hourly or full-day private chauffeur in Nairobi and beyond.',
  'Professional driver|Flexible hours|Discreet service',
- 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1200&q=80'),
+ 'assets/images/vehicles/05-chauffeur.jpg'),
 ('Wedding & Event Fleet', 'wedding-event-fleet', 'event', 12, 25000,
  'Decor-ready cars and vans for weddings and corporate events.',
  'Decor coordination|Multiple vehicles|On-time logistics',
- 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80')
-ON DUPLICATE KEY UPDATE name = VALUES(name);
+ 'assets/images/vehicles/06-wedding.jpg')
+ON DUPLICATE KEY UPDATE name = VALUES(name), image_url = VALUES(image_url);
 
 INSERT INTO drivers (name, phone, license_no, status) VALUES
 ('James Otieno', '+254711000001', 'DL-KE-10021', 'available'),

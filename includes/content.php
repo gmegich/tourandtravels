@@ -36,16 +36,43 @@ function fallback_packages(): array
     ];
 }
 
-function fallback_vehicles(): array
+/** Local realistic fleet photos (always preferred over remote placeholders). */
+function vehicle_image_map(): array
 {
     return [
-        ['name' => 'Toyota Vellfire', 'slug' => 'toyota-vellfire', 'category' => 'vellfire', 'capacity' => 6, 'price_per_day' => 18000, 'description' => 'Executive VIP van for airport runs and city transfers.', 'features' => 'Leather seats|AC|Wi-Fi option|Bottled water', 'image_url' => 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&q=80'],
-        ['name' => 'Safari Tour Van', 'slug' => 'safari-tour-van', 'category' => 'safari_van', 'capacity' => 8, 'price_per_day' => 15000, 'description' => 'Pop-up roof safari van built for game drives.', 'features' => 'Pop-up roof|Charging ports|Cooler box|Experienced driver-guide', 'image_url' => 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80'],
-        ['name' => 'Land Cruiser 4x4', 'slug' => 'land-cruiser-4x4', 'category' => 'land_cruiser', 'capacity' => 6, 'price_per_day' => 22000, 'description' => 'Rugged 4x4 for rough tracks and remote parks.', 'features' => '4WD|High clearance|Roof hatch|Safari seating', 'image_url' => 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80'],
-        ['name' => 'Airport Transfer', 'slug' => 'airport-transfer', 'category' => 'transfer', 'capacity' => 4, 'price_per_day' => 5000, 'description' => 'JKIA and Wilson meet-and-greet with fixed rates.', 'features' => 'Flight tracking|Meet & greet|Child seats on request', 'image_url' => 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80'],
-        ['name' => 'Chauffeur Service', 'slug' => 'chauffeur-service', 'category' => 'chauffeur', 'capacity' => 3, 'price_per_day' => 12000, 'description' => 'Hourly or full-day private chauffeur in Nairobi and beyond.', 'features' => 'Professional driver|Flexible hours|Discreet service', 'image_url' => 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1200&q=80'],
-        ['name' => 'Wedding & Event Fleet', 'slug' => 'wedding-event-fleet', 'category' => 'event', 'capacity' => 12, 'price_per_day' => 25000, 'description' => 'Decor-ready cars and vans for weddings and corporate events.', 'features' => 'Decor coordination|Multiple vehicles|On-time logistics', 'image_url' => 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80'],
+        'toyota-vellfire' => 'assets/images/vehicles/01-vellfire.jpg',
+        'safari-tour-van' => 'assets/images/vehicles/02-safari-van.jpg',
+        'land-cruiser-4x4' => 'assets/images/vehicles/03-land-cruiser.jpg',
+        'airport-transfer' => 'assets/images/vehicles/04-airport.jpg',
+        'chauffeur-service' => 'assets/images/vehicles/05-chauffeur.jpg',
+        'wedding-event-fleet' => 'assets/images/vehicles/06-wedding.jpg',
     ];
+}
+
+function apply_vehicle_images(array $rows): array
+{
+    $map = vehicle_image_map();
+    foreach ($rows as &$row) {
+        $slug = (string) ($row['slug'] ?? '');
+        if ($slug !== '' && isset($map[$slug]) && is_file(dirname(__DIR__) . '/' . $map[$slug])) {
+            // Cache-bust so browsers don't keep old non-Kenyan plate images
+            $row['image_url'] = asset_url($map[$slug]);
+        }
+    }
+    unset($row);
+    return $rows;
+}
+
+function fallback_vehicles(): array
+{
+    return apply_vehicle_images([
+        ['name' => 'Toyota Vellfire', 'slug' => 'toyota-vellfire', 'category' => 'vellfire', 'capacity' => 6, 'price_per_day' => 18000, 'description' => 'Executive VIP van for airport runs and city transfers.', 'features' => 'Leather seats|AC|Wi-Fi option|Bottled water', 'image_url' => 'assets/images/vehicles/01-vellfire.jpg'],
+        ['name' => 'Safari Tour Van', 'slug' => 'safari-tour-van', 'category' => 'safari_van', 'capacity' => 8, 'price_per_day' => 15000, 'description' => 'Pop-up roof safari van built for game drives.', 'features' => 'Pop-up roof|Charging ports|Cooler box|Experienced driver-guide', 'image_url' => 'assets/images/vehicles/02-safari-van.jpg'],
+        ['name' => 'Land Cruiser 4x4', 'slug' => 'land-cruiser-4x4', 'category' => 'land_cruiser', 'capacity' => 6, 'price_per_day' => 22000, 'description' => 'Rugged 4x4 for rough tracks and remote parks.', 'features' => '4WD|High clearance|Roof hatch|Safari seating', 'image_url' => 'assets/images/vehicles/03-land-cruiser.jpg'],
+        ['name' => 'Airport Transfer', 'slug' => 'airport-transfer', 'category' => 'transfer', 'capacity' => 4, 'price_per_day' => 5000, 'description' => 'JKIA and Wilson meet-and-greet with fixed rates.', 'features' => 'Flight tracking|Meet & greet|Child seats on request', 'image_url' => 'assets/images/vehicles/04-airport.jpg'],
+        ['name' => 'Chauffeur Service', 'slug' => 'chauffeur-service', 'category' => 'chauffeur', 'capacity' => 3, 'price_per_day' => 12000, 'description' => 'Hourly or full-day private chauffeur in Nairobi and beyond.', 'features' => 'Professional driver|Flexible hours|Discreet service', 'image_url' => 'assets/images/vehicles/05-chauffeur.jpg'],
+        ['name' => 'Wedding & Event Fleet', 'slug' => 'wedding-event-fleet', 'category' => 'event', 'capacity' => 12, 'price_per_day' => 25000, 'description' => 'Decor-ready cars and vans for weddings and corporate events.', 'features' => 'Decor coordination|Multiple vehicles|On-time logistics', 'image_url' => 'assets/images/vehicles/06-wedding.jpg'],
+    ]);
 }
 
 function get_destinations(bool $featured_only = false): array
@@ -81,7 +108,7 @@ function get_packages(bool $popular_only = false): array
 function get_vehicles(): array
 {
     $rows = fetch_all('SELECT * FROM vehicles WHERE is_available = 1 ORDER BY name');
-    return $rows ?: fallback_vehicles();
+    return apply_vehicle_images($rows ?: fallback_vehicles());
 }
 
 function category_label(string $cat): string
